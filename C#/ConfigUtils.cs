@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.IO;
 
-namespace GitHubPush
+namespace Coloryr.Lib
 {
     class ConfigUtils
     {
@@ -27,9 +27,6 @@ namespace GitHubPush
             }
             return obj;
         }
-        /// <summary>
-        /// 保存配置文件
-        /// </summary>
         public static void Save(object obj, string FilePath)
         {
             lock (Locker)

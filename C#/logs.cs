@@ -1,14 +1,15 @@
 ﻿using System;
 using System.IO;
 
-namespace GitHubPush
+namespace Coloryr.Lib
 {
-    internal class Logs
+    public class Logs
     {
-        public static string log = "logs.log";
-        private static object obj = new object();
+        public string log = "logs.log";
+        private object obj = new object();
+        public string Dir { get; init; }
 
-        public static void LogWrite(string a)
+        public void LogWrite(string a)
         {
             try
             {
@@ -18,7 +19,7 @@ namespace GitHubPush
                     string year = date.ToShortDateString().ToString();
                     string time = date.ToLongTimeString().ToString();
                     string write = "[" + year + "]" + "[" + time + "]" + a;
-                    File.AppendAllText(Program.Path + log, write + Environment.NewLine);
+                    File.AppendAllText(Dir + log, write + Environment.NewLine);
                     Console.WriteLine(write);
                 }
             }
@@ -28,12 +29,12 @@ namespace GitHubPush
             }
         }
 
-        public static void LogError(Exception e)
+        public void LogError(Exception e)
         {
             LogWrite("[ERROR]" + e.Message + "\n" + e.StackTrace);
         }
 
-        public static void LogError(string e)
+        public void LogError(string e)
         {
             LogWrite("[ERROR]" + e);
         }
