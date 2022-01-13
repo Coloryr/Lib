@@ -8,14 +8,6 @@
 #include "qspi/w25q64.h"
 
 typedef struct {
-#if USE_TF == 0
-    w25qxx_utils fp;
-#else
-    FIL fp;
-#endif
-} font_load_fp;
-
-typedef struct {
     my_font_data* (*get_font_data)(lv_font_t*);
     font_load_fp* (*start_read)(my_font_data*);
     void (*read)(font_load_fp*, void *, uint16_t);

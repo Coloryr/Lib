@@ -4,6 +4,8 @@
 #include "lvgl.h"
 #include "font_config.h"
 
+#include "fatfs.h"
+
 typedef struct font_header_bin {
     uint32_t version;
     uint16_t tables_count;
@@ -46,6 +48,8 @@ typedef struct {
     uint32_t file_local;
 #else
     const char* file_name;
+    FIL file;
+    font_load_fp fp;
 #endif
 } my_font_data;
 

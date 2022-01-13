@@ -74,6 +74,14 @@ void load_font() {
     font_24.file_name = FONT_24_FILE;
     font_32.file_name = FONT_32_FILE;
 
+    f_open(&font_16.file, FONT_16_FILE, FA_READ);
+    f_open(&font_24.file, FONT_24_FILE, FA_READ);
+    f_open(&font_32.file, FONT_32_FILE, FA_READ);
+
+    font_16.fp.fp = font_16.file;
+    font_24.fp.fp = font_24.file;
+    font_32.fp.fp = font_32.file;
+
 #endif
 
     font_16.glyph_bmp = malloc(sizeof(uint8_t) * 2 * 16 * 3);

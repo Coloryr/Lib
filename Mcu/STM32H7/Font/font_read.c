@@ -52,7 +52,9 @@ void read(font_load_fp* fp, void * data, uint16_t size) {
 
 #else
 
-void set_pos(font_load_fp* fp,uint32_t pos){
+void set_pos(font_load_fp* fp,uint32_t pos) {
+    if (f_tell(&fp->fp) == pos)
+        return;
     f_lseek(&fp->fp, pos);
 }
 
@@ -62,14 +64,11 @@ void add_pos(font_load_fp* fp,uint32_t pos) {
 }
 
 font_load_fp* start_read(my_font_data* font_data){
-    font_load_fp* fp = malloc(sizeof(font_load_fp));
-    f_open(&fp->fp, font_data->file_name, FA_READ);
-    return fp;
+    return &font_data->fp;
 }
 
 void stop_read(font_load_fp* fp) {
-    f_close(&fp->fp);
-    free(fp);
+
 }
 
 void read(font_load_fp* fp, void * data, uint16_t size) {

@@ -160,7 +160,9 @@ const uint8_t *my_get_glyph_bitmap_cb(const lv_font_t *font, uint32_t unicode_le
     nbits = font_data->header_bin.advance_width_bits + 2 * font_data->header_bin.xy_bits +
             2 * font_data->header_bin.wh_bits;
 
-    font_load_api.add_pos(bit_it.fp, nbits);
+    font_read_bits(&bit_it, nbits);
+
+//    font_load_api.add_pos(bit_it.fp, nbits);
 
     if (gid < font_data->loca_count) {
         next = font_data->glyph_start + next;
