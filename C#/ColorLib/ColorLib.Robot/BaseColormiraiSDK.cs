@@ -1,13 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
-//请用net5运行
-//并安装Newtonsoft.Json
-namespace ColoryrSDK
+
+namespace ColorLib.Robot
 {
     //机器人返回数据包
     /// <summary>
