@@ -17,6 +17,8 @@ namespace CmdControl
     public partial class App : Application
     {
         public const string Version = "1.0.0";
+        public static string Local { get; private set; }
+        public static App ThisApp { get; private set; }
 
         public App()
         {
@@ -66,7 +68,7 @@ namespace CmdControl
             MessageBox.Show(sbEx.ToString());
         }
 
-        private void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
+        private void TaskScheduler_UnobservedTaskException(object? sender, UnobservedTaskExceptionEventArgs e)
         {
             MessageBox.Show("捕获线程内未处理异常：" + e.Exception.ToString());
             e.SetObserved();

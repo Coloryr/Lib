@@ -6,18 +6,18 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/xxx;component/Style/Button.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/CheckBox.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/ComboBox.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/ContextMenu.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/GroupBox.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/Label.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/ListView.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/RadioButton.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/Slider.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/TabControl.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Style/TextBox.xaml"/>
-                <ResourceDictionary Source="/xxx;component/Custom/Xaml/UTabItem.xaml"/>
+                <ResourceDictionary Source="/Style/Button.xaml"/>
+                <ResourceDictionary Source="/Style/CheckBox.xaml"/>
+                <ResourceDictionary Source="/Style/ComboBox.xaml"/>
+                <ResourceDictionary Source="/Style/ContextMenu.xaml"/>
+                <ResourceDictionary Source="/Style/GroupBox.xaml"/>
+                <ResourceDictionary Source="/Style/Label.xaml"/>
+                <ResourceDictionary Source="/Style/ListView.xaml"/>
+                <ResourceDictionary Source="/Style/RadioButton.xaml"/>
+                <ResourceDictionary Source="/Style/Slider.xaml"/>
+                <ResourceDictionary Source="/Style/TabControl.xaml"/>
+                <ResourceDictionary Source="/Style/TextBox.xaml"/>
+                <ResourceDictionary Source="/Custom/Xaml/UTabItem.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
