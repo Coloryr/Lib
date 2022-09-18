@@ -106,12 +106,17 @@
                                     Background="Transparent"
                                     BorderBrush="#335EBDD3"
                                     BorderThickness="0,0,0,0">
-                                    <TextBlock
+                                    <!--<TextBlock
                                         Margin="3,0,3,0"
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Center"
                                         Foreground="Black"
-                                        Text="{Binding Content.Value, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" />-->
+                                    <ContentPresenter
+                                        Margin="3,0,3,0"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        ContentSource="{Binding Source}" />
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
@@ -140,6 +145,7 @@
                         <Rectangle Fill="#22898989" />
                         <TextBox
                             Grid.Column="0"
+                            Margin="2,0,0,0"
                             VerticalAlignment="Center"
                             Background="Transparent"
                             BorderBrush="#5EBDD300"
